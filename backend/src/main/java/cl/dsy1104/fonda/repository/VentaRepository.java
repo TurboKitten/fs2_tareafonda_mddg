@@ -1,5 +1,8 @@
 package cl.dsy1104.fonda.repository;
 
-public class VentaRepository {
-    
+import cl.dsy1104.fonda.model.Venta;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface VentaRepository extends JpaRepository<Venta,Long>{
+    boolean existsByBebidaId(Long bebidaId);
 }
